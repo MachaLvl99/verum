@@ -16,7 +16,14 @@ Verum is a live UI prototyping tool that allows you to prompt for components tha
 
 ## Setup
 
-To try it out, clone the repo
+*IMPORTANT* This code calls `GEMINI_API_KEY` and NOT `API_KEY`. You can change the variable name if you wish in `service.py`, but **do not hard-code your 
+API keys in your script!**
+set up your environment vars in your terminal
+```
+export GEMINI_API_KEY="YOUR_API_KEY"
+```
+
+Find a good spot to clone the repo
 
 ```
 git clone https://github.com/MachaLvl99/verum.git
@@ -34,6 +41,7 @@ react:
 cd .../verum/verum
 npm start
 ```
+and voila!
 
 ## Usage
 
