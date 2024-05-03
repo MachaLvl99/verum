@@ -73,7 +73,7 @@ function App() {
         <PageHeader
           alignSelf="center"
           title="Welcome to Verum!"
-          subtitle="Start prompting Gemini for grommet components to your left. The output will display the function call results. Export will produce the code for the grommet components (unavailable in proof of concept). Gemini may not always return the correct component, but being specific helps!"
+          subtitle="Start prompting Gemini for grommet components to your left. The output will display the function call results."
       />
       </Box>
       </Grid>
