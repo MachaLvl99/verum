@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Gemini Tools
+  description: This is the function-decleration schema for Gemini to use. Think of it like a blueprint for functions that Gemini can call.
+  version: 0.1.0
+tools:
+  functions:
+    - name: "AddItem"
+    - description: "Adds a grommet object to the UI"
+    - parameters:
+      - type: "object"
+      - properties:
+        - component: 
+          - type: "string"
+          - description: "The name of the grommet component to add"
+        - props:
+          - type: "object"
+          - description: "The props of the grommet component to add"
+      - required:
+        - component
+        - props
+    - returns:
+      - type: "object"
+      - description: "The added grommet object"
+      - properties:
+        - id:
+          - type: "string"
+          - description: "The id of the added grommet object"
+        - component:
+          - type: "string"
+          - description: "The name of the added grommet component"
+        - props:
+          - type: "object"
+          - description: "The props of the added grommet component"
+    - name: "RemoveItem"
+    - description: "Removes a grommet object from the UI"
+    - parameters:
+      - type: "object"
+      - properties:
+        - id:
+          - type: "string"
+          - description: "The id of the grommet object to remove"
+      - required:
+        - id
+    - returns:
+      - type: "object"
+      - description: "The removed grommet object"
+      - properties:
+        - id:
+          - type: "string"
+          - description: "The id of the removed grommet object"
+    - name: "ModifyItem"
+    - description: "Modifies an existing object in the UI by updating its props. They will be referenced in the prompt through their id value."
+    - parameters:
+      - type: "object"
+      - properties:
+        - component: 
+          - type: "string"
+          - description: "The name of the grommet component that is being modified"
+        - props:
+          - type: "object"
+          - description: "The new props of the grommet component"
+      - required:
+        - component
+        - props
+
+  

@@ -1,0 +1,1 @@
+export { default as MovingBox } from './MovingBox/MovingBox';
