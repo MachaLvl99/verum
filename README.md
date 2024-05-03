@@ -34,12 +34,12 @@ Start up your localhosts
 
 python:
 ```
-cd .../verum/python-server
+cd verum/python-server
 python service.py
 ```
 react:
 ```
-cd .../verum/verum
+cd verum/verum
 npm start
 ```
 and voila!
